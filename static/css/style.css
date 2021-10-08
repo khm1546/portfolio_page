@@ -1,0 +1,45 @@
+@charset 'utf-8';
+
+* {
+    margin:0;
+    padding:0;
+}
+
+html, body {
+    height:100%;
+}
+
+
+@media all and (min-width:1024px) {
+    .container {
+        width:1024px;
+        height:100%;
+        margin:0 auto;
+    }
+
+    .nav_main{
+        width: 100%;
+        height: 600px;
+        position: relative;
+        background-color:#000;
+    }
+
+    .nav_main::before{
+        content: "";
+        background: url('/static/img/nav_backimg.jpg');
+        background-size: cover;
+        opacity: 0.5;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+
+}
+
+@media all and (max-width:767px) {
+    .container {
+        width:100%;
+    }
+}
