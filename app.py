@@ -12,7 +12,7 @@ def home():
 
 @app.route('/yujin_m')
 def yujin_m():
-    return render_template('main.html')
+    return render_template('/yujin/main.html')
 
 
 @app.route('/all')
