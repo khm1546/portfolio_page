@@ -9,7 +9,6 @@ app = Flask(__name__)
 def home():
     me = Members.query.filter(Members.name == '김형민').first()
     me.name = "성공"
-    me.question = "자자"
     db_session.add(me)
     db_session.commit()
     return render_template('index.html')
