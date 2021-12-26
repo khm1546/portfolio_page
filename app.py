@@ -9,9 +9,15 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+
+@app.route('/yujin_m')
+def yujin_m():
+    return render_template('main.html')
+
+
 @app.route('/all')
 def select_all():
-    me = Members.query.filter(Members.name == '김형민3', Members.type == '1', Members.question == '테스트1').first()
+    me = Members.query.filter(Members.name == '김형민').first()
     me.name = "성공"
     me.question = "자자"
     db_session.add(me)
